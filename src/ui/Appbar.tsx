@@ -1,21 +1,23 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import MenuIcon from '@mui/icons-material/Menu';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Toolbar from '@mui/material/Toolbar';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
 
 const pages = ['Home', 'Portfolio', 'Contact'];
-const socials = [{ name: 'linkedin', link:'https://www.linkedin.com/in/aymeric-lavaud/' }, { name: 'github', link:'https://github.com/Ciremy' }];
-
+const socials = [
+  { name: 'linkedin', link: 'https://www.linkedin.com/in/aymeric-lavaud/' },
+  { name: 'github', link: 'https://github.com/Ciremy' },
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -37,12 +39,13 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" color='primary'>
+    <AppBar position="static" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            {//changer le logo a profit d'une photo 
+            {
+              //changer le logo a profit d'une photo
             }
             <IconButton
               size="large"
@@ -95,8 +98,7 @@ function ResponsiveAppBar() {
               color: 'inherit',
               textDecoration: 'none',
             }}
-          >
-          </Typography>
+          ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
@@ -133,7 +135,9 @@ function ResponsiveAppBar() {
             >
               {socials.map((social) => (
                 <MenuItem key={social.name} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"><a href={`${social.link}`} >{social.name}</a></Typography>
+                  <Typography textAlign="center">
+                    <a href={`${social.link}`}>{social.name}</a>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
