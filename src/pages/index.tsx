@@ -3,6 +3,7 @@ import { createTheme } from '@mui/material';
 import Head from 'next/head';
 
 import ResponsiveAppBar from '../ui/Appbar';
+import Splider from '../ui/Splider';
 
 const theme = createTheme({
   palette: {
@@ -30,8 +31,8 @@ function Home() {
       <ThemeProvider theme={theme}>
         <ResponsiveAppBar />
       </ThemeProvider>
-
-      <div>toto</div>
+      <Splider />
+      <p className="underline text-emerald-900">Home</p>
     </>
   );
 }
