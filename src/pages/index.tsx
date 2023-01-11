@@ -2,8 +2,8 @@ import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
 import Head from 'next/head';
 
-import ResponsiveAppBar from '../ui/Appbar';
-import Splider from '../ui/Splider';
+import ResponsiveAppBar from '../ui/Appbar/Appbar';
+import Splider from '../ui/Splider/Splider';
 
 const theme = createTheme({
   palette: {
